@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.FAVIOSENGER/cte-mdfe-mcp",
+  "description": "Emissao e consulta de CT-e e MDF-e (documentos fiscais de transporte) no Brasil para agentes de IA, via Focus NFe.",
+  "repository": {
+    "url": "https://github.com/FAVIOSENGER/cte-mdfe-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "cte-mdfe-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "FOCUS_NFE_TOKEN",
+          "description": "Token da conta Focus NFe",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "FOCUS_NFE_AMBIENTE",
+          "description": "homologacao (padrao) ou producao",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "cte-mdfe-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.FAVIOSENGER/cte-mdfe-mcp",
+  "description": "Emissao e consulta de CT-e e MDF-e (documentos fiscais de transporte) no Brasil para agentes de IA, via Focus NFe.",
+  "license": "MIT",
+  "author": "Favio Senger",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FAVIOSENGER/cte-mdfe-mcp.git"
+  },
+  "homepage": "https://github.com/FAVIOSENGER/cte-mdfe-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/FAVIOSENGER/cte-mdfe-mcp/issues"
+  },
+  "type": "module",
+  "bin": {
+    "cte-mdfe-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cte",
+    "mdfe",
+    "transporte",
+    "logistica",
+    "fiscal",
+    "brasil"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}
